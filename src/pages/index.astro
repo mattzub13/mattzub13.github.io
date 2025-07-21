@@ -7,28 +7,15 @@ import Contact from "../components/Contact.astro";
 import Habilidades from "../components/Habilidades.astro";
 import Footer from "../components/Footer.astro";
 import Tecnologias from "../components/Tecnologias.astro";
+import { Navbar } from "../components/Navbar";
+import { Hero } from "../components/Hero";
+import { Experiencie } from "../components/Experiencie";
 ---
 
 <Layout title="Mateo Zubieta Portfolio">
-  <Header />
-
-  <section class="lg:mt-20 mt-10">
-    <div class="flex mx-4 lg:mx-14 lg:flex-row flex-col items-start">
-      <Profile />
-      <div
-        class="lg:w-2/4 lg:ml-auto flex flex-col items-start mt-6 overflow-y-auto overflow-x-hidden lg:h-[550px] h-auto"
-        style={{ scrollBehavior: "smooth", scrollbarWidth: "none" }}
-      >
-        <Contact />
-        <div class="w-full h-0.5 bg-linen my-4 lg:mr-12"></div>
-
-        <Tecnologias />
-
-        <Experiencia />
-
-        <Habilidades />
-      </div>
-    </div>
-  </section>
-  <Footer />
+  <!-- <Navbar /> -->
+  <Hero client:load />
+  <div class="h-12 w-full bg-primary rounded-b-3xl">
+  </div>
+  <Experiencie client:load />
 </Layout>

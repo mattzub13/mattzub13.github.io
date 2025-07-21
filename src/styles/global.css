@@ -1,0 +1,26 @@
+/* ✅ Primero las fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Notable&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ⚠️ Evita importar Boldonse si no existe */
+
+/* ✅ Luego Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tu CSS */
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.bg-dot-pattern {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 10px 10px;
+  opacity: 0.4;
+}
