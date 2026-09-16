@@ -2,6 +2,14 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const experiences = [
     {
+        title: 'Profesor en STEAM',
+        company: 'Colegio britanico Tarija',
+        date: '2026 enero - actualidad',
+        description: 'Enseño a niños en una materia realicionado a la gestion de proyectyos y como desarrollar soluciones con materias como Sciencia Maths,etc.',
+        img: "https://res.cloudinary.com/dltdmauyw/image/upload/v1789580403/britanico_logo-removebg-preview_asja8p.png",
+        size: "h-20"
+    },
+    {
         title: 'Desarrollador Frontend',
         company: 'Favorcito',
         date: '2025 may - 2025 jul',
@@ -33,6 +41,7 @@ const experiences = [
         img: "https://res.cloudinary.com/dltdmauyw/image/upload/v1752958756/logo-ciudatos_g3a7u2.png",
         size: "h-12"
     },
+
     // Puedes agregar más...
 ]
 

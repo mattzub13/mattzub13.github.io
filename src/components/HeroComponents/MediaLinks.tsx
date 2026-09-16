@@ -21,7 +21,7 @@ export const MediaLinks = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className='flex py-8 lg:py-4 gap-3 lg:gap-8 absolute bottom-28 left-[30%] md:left-[42%] lg:static  '>
+            className='flex py-8 lg:py-4 gap-3 lg:gap-8 absolute top-[55%] left-[32%] md:left-[42%] lg:static  '>
 
             {mediaLinks.map((mediaLink) => (
                 <motion.div

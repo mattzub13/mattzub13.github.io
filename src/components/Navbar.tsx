@@ -6,23 +6,24 @@ const navItems: { icon: string, label: string, navigate: string }[] = [
         label: "Experiencia",
         navigate: "experiencia"
     },
-    {
-        icon: "fa-note-sticky",
-        label: "Blog",
-        navigate: "blog"
-    },
-    {
-        icon: "fa-layer-group",
-        label: "Stack",
-        navigate: "stack"
-    },
-    {
-        icon: "fa-diagram-project",
-        label: "Proyectos",
-        navigate: "proyectos"
-    }
+    // {
+    //     icon: "fa-note-sticky",
+    //     label: "Blog",
+    //     navigate: "blog"
+    // },
+    // {
+    //     icon: "fa-layer-group",
+    //     label: "Stack",
+    //     navigate: "stack"
+    // },
+    // {
+    //     icon: "fa-diagram-project",
+    //     label: "Proyectos",
+    //     navigate: "proyectos"
+    // }
 ]
 export const Navbar = () => {
+
     const [hoveredIndex, setHoveredIndex] = useState(null);
     return (
         <motion.div
@@ -30,12 +31,13 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="absolute bottom-8 left-[220px] lg:left-[36%] xl:left-[41%] lg:flex hidden gap-6"
+            className="absolute bottom-8 left-[220px] lg:left-[36%] xl:left-[44%] lg:flex hidden gap-6"
         >
             {navItems.map((item, index) => (
                 <div
                     key={item.label}
                     className="flex items-center gap-2"
+                    onClick={() => (window.location.href = `#${item.navigate}`)}
                     onMouseEnter={() => setTimeout(() => {
                         setHoveredIndex(index)
                     }, 80)}

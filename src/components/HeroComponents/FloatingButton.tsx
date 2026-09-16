@@ -13,6 +13,7 @@ export const FloatingButton = () => {
                 repeatType: "loop",
                 ease: "easeInOut", // hace que suba y baje suavemente
             }}
+            onClick={() => (window.location.href = `#experiencia`)}
             className="w-16 aspect-square bg-accent rounded-full lg:flex items-center justify-center cursor-pointer right-12 bottom-12 absolute hidden"
         >
             <a

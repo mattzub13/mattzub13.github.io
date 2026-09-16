@@ -10,7 +10,7 @@ export const ContentCards = () => {
                 animate={{ opacity: 1, x: 0 }}
 
                 transition={{ duration: 0.6 }} className="absolute top-[30%] lg:left-0 xl:left-[5%] p-6 rounded-xl w-[300px] lg:w-[400px] xl:w-[460px] font-display">
-                <h2 className="text-xl xl:text-2xl font-bold mb-2">+2 años de experiencia</h2>
+                <h2 className="text-xl xl:text-2xl font-bold mb-2">+3 años de experiencia</h2>
                 <p className="font-sans font-extralight mb-2 text-xs xl:text-sm">
                     Graduado de Ingeniería de Sistemas en la <br /><span className="font-semibold">Universidad Católica Boliviana</span>.
                 </p>

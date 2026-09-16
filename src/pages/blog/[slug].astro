@@ -1,0 +1,26 @@
+---
+import { getEntry, getCollection } from "astro:content";
+import Layout from "../../layouts/BlogLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntry("blog", slug);
+
+if (!post) throw new Error(`No se encontró el post: ${slug}`);
+
+const { data, render } = post;
+const { Content } = await render();
+---
+
+<Layout title={data.title} date={data.date}>
+  <article class="prose dark:prose-invert mx-auto">
+    <Content />
+  </article>
+</Layout>

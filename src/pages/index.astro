@@ -1,21 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Experiencia from "../components/Experiencia.astro";
-import Profile from "../components/Profile.astro";
-import Contact from "../components/Contact.astro";
-import Habilidades from "../components/Habilidades.astro";
-import Footer from "../components/Footer.astro";
-import Tecnologias from "../components/Tecnologias.astro";
-import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
 import { Experiencie } from "../components/Experiencie";
+import { Blog } from "../components/Blog";
+import { Proyectos } from "../components/Proyectos";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+const optimizedPosts = posts.map((post) => ({
+  slug: "/blog/" + post.slug,
+  title: post.data.title,
+  date: post.data.date,
+  description: post.data.description || "",
+  // si tienes más metadata que quieras incluir, añádela aquí
+}));
+// Ordena por fecha descendente (opcional)
 ---
 
 <Layout title="Mateo Zubieta Portfolio">
   <!-- <Navbar /> -->
   <Hero client:load />
-  <div class="h-12 w-full bg-primary rounded-b-3xl">
-  </div>
+  <div class="h-12 w-full bg-primary rounded-b-3xl"></div>
   <Experiencie client:load />
+
+  <!-- <Blog posts={optimizedPosts} client:load />
+  <Proyectos client:load /> -->
 </Layout>

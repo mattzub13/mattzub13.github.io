@@ -1,0 +1,29 @@
+---
+const { title, date } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-secondary text-black">
+    <main
+      class="prose lg:prose-xl mx-auto px-4 py-8 text-font
+             prose-headings:text-black
+             prose-p:text-black
+             prose-li:text-black
+             prose-strong:text-black
+             prose-em:text-black
+             prose-li
+             prose-code:text-red-600
+             prose-a:text-blue-600
+             prose-code:px-1
+             prose-code:rounded"
+    >
+      <h1 class="text-primary">{title}</h1>
+      <p class="text-sm text-font">{date}</p>
+      <slot />
+    </main>
+  </body>
+</html>

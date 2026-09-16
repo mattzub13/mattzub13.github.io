@@ -27,7 +27,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="absolute bottom-48 lg:bottom-24 transform left-16 md:left-[32%] lg:left-[36%] xl:left-[41%] text-xl md:text-3xl font-bold"
+          className="absolute top-[50%] lg:top-[80%] lg:bottom-24 transform left-[25%] md:left-[32%] lg:left-[36%] xl:left-[41%] text-xl md:text-3xl font-bold"
         >
           Mateo Zubieta
         </motion.h1>
